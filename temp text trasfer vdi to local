@@ -1,1 +1,6 @@
+Initial Setup on AWS Cloud Systems
 
+Adapt the system settings for a new system created from existing system image, or Teamcenter specific configuration adaptation
+Proxy Settings, No Proxy hosts bashrc pass system aliases hostfile configuration Certificates
+
+Additionally, store the system configuration in GIT/DB/??
