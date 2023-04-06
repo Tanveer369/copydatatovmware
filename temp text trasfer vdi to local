@@ -97,3 +97,54 @@ with the required system settings.
 By automating these steps, you can ensure that your system is properly configured and that changes are 
 integrated and tested before deployment. This approach also allows you to easily replicate your configuration 
 across multiple instances or environments.
+
+
+#################################################################################################
+
+Sure, here's a technical specification for automating the CICD use case using automation tools, with a focus on security, scalability, and reliability:
+
+Overview:
+The goal of this project is to automate the initial setup of AWS Cloud Systems by adapting system settings for new systems created from existing system images or Teamcenter-specific configuration adaptation. The project will use Ansible and Jenkins to automate the process, store the system configuration in Git, and securely manage any secrets using Vault.
+
+Tools Used:
+
+Ansible: Configuration management tool
+Jenkins: CI/CD tool
+AWS CloudFormation: Infrastructure as code tool
+Git: Version control tool
+Vault: Secret management tool
+Functional Requirements:
+
+Provision the AWS EC2 instance using AWS CloudFormation. Use an existing AMI or a custom AMI with the required system and software configurations.
+Install and configure Ansible on the AWS EC2 instance.
+Create an Ansible playbook to adapt the system settings on the AWS EC2 instance. The playbook should include the following tasks:
+Update Proxy Settings: Update the system's proxy settings if required.
+Configure No Proxy Hosts: Configure the system to access resources on the local network that should not be accessed through the proxy server.
+Update Bashrc: Update the bashrc file with any customizations to the shell environment, such as aliases or environment variables.
+Configure System Aliases: Configure any custom system aliases that are frequently used.
+Update Hostfile Configuration: Update the hostfile configuration to access resources on the local network using hostnames rather than IP addresses.
+Install SSL Certificates: Install SSL certificates to enable secure communication on the network.
+Store the Ansible playbook and system configuration files in Git. Use Git to manage and version control the system configuration files.
+Install and configure Jenkins on the AWS EC2 instance.
+Create a Jenkins job to automate the CICD process. The job should include the following steps:
+Checkout code from the Git repository.
+Build the Ansible playbook using Ansible and create an inventory file with the target hosts.
+Use Vault to securely manage any secrets required by the playbook, such as SSL certificates and passwords.
+Use Ansible to adapt the system settings on the AWS EC2 instance.
+Store the Jenkins job and pipeline configuration in Git. Use Git to manage and version control the CI/CD pipeline configuration.
+Configure Jenkins to trigger the CI/CD pipeline automatically when changes are made to the Git repository.
+Test the CI/CD pipeline to ensure that the system is properly configured and that changes are integrated and tested before deployment.
+Non-functional Requirements:
+
+Security:
+Use Vault to securely manage any secrets required by the Ansible playbook, such as SSL certificates and passwords.
+Ensure that all communication between tools and services is secured using SSL/TLS.
+Use IAM roles and policies to limit access to AWS resources and ensure that only authorized users can make changes to the system.
+Scalability:
+The system should be able to adapt the system settings for multiple AWS EC2 instances at once.
+Use AWS autoscaling groups to automatically scale the number of instances based on demand.
+Reliability:
+Ensure that the CI/CD pipeline is reliable and can handle errors or failures gracefully.
+Use AWS CloudWatch to monitor system logs and metrics and quickly identify and resolve any issues.
+Use Ansible's idempotent nature to ensure that the same playbook can be run multiple times without causing unexpected changes to the system.
+By automating these steps with a focus on security, scalability, and reliability, you can ensure that your system is properly configured and that changes are integrated
