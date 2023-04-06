@@ -1,0 +1,14 @@
+Incremental Updates - System Maintenance on AWS Test Systems:
+Prepare/update certificates
+Perform housekeeping activities: log housekeeping,
+
+
+Operational activities on AWS Test Systems:
+Enable Debugging on the System.
+Enable or disable a debug session for a specific session.
+
+
+Initial setup on On-premise Test Systems:
+Prepare system-configuration for fresh systems  (non Teamcenter configuration) bashrc pass system aliases hostfile configuration Certificates 
+Required 3rd party software: Java, Python etc.
+Additionally, Store the system configuration in GIT/DB/??
