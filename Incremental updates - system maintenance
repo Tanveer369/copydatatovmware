@@ -102,14 +102,13 @@ Acronis Backup
 steps for updating certificates using automation tools on AWS test systems:
 
 Identify the certificate that needs to be updated on the AWS test system.
-
 Use a certificate management tool like Let's Encrypt or AWS Certificate Manager to generate a new certificate.
 
 Configure the certificate management tool to automate the certificate update process.
-
 Use a configuration management tool like Ansible or Puppet to automate the deployment of the new certificate to the AWS test system.
 
-Use a monitoring tool like CloudWatch to monitor the health of the AWS test system and detect any issues that may arise after the certificate update.
+Use a monitoring tool like CloudWatch to monitor the health of the AWS test system and detect any issues that may arise 
+after the certificate update.
 
 Verify that the new certificate has been successfully deployed and is working as expected.
 
@@ -129,4 +128,35 @@ Use a CI/CD pipeline to automate the entire update process. This helps to ensure
 
 Use infrastructure as code (IaC) tools like CloudFormation or Terraform to provision and manage the AWS test system. This allows for the creation and modification of infrastructure to be automated, versioned, and tested.
 
-By following these steps and technical specifications, you can update certificates on AWS test systems using automation tools in a secure and efficient manner.
+#########################################################################################################
+
+Sure, here are the technical modules that would be needed for updating certificates on AWS test systems using automation tools:
+
+Certificate management tool: This module would provide the ability to generate and renew SSL/TLS certificates on the AWS 
+test systems. The certificate management tool could be either Let's Encrypt or AWS Certificate Manager.
+
+Configuration management tool: This module would provide the ability to automate the deployment of the new 
+SSL/TLS certificate to the AWS test system. The configuration management tool could be either Ansible or Puppet.
+
+Monitoring tool: This module would provide the ability to monitor the health of the AWS test system and detect any
+issues that may arise after the certificate update. The monitoring tool could be CloudWatch.
+
+Backup tool: This module would provide the ability to create a backup of the AWS test system before the 
+certificate update. The backup tool could be AWS Backup.
+
+CI/CD pipeline: This module would provide the ability to automate the entire update process. The CI/CD 
+pipeline would automate the certificate update process, ensuring that the process is consistent, reliable, and repeatable.
+
+Infrastructure as code (IaC) tool: This module would provide the ability to provision and manage the AWS test system. 
+The IaC tool could be either CloudFormation or Terraform.
+
+Scripting language: This module would provide the ability to write scripts to automate the certificate update process. 
+The scripting language could be either Python or Bash.
+
+Version control system: This module would provide the ability to version control the scripts and configuration files used 
+in the certificate update process. The version control system could be Git.
+
+By using these technical modules, the updating of SSL/TLS certificates on AWS test systems can be fully automated, 
+making the process more efficient and reducing the risk of human error. The modules work together to ensure that the 
+entire update process, from generating the new certificate to deploying it to the AWS test system, is automated, reliable, 
+and repeatable.
