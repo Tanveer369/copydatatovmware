@@ -1,2 +1,119 @@
  - Enable Debugging on the System
  Enable or disable a debug session for a specific session
+ 
+ 
+ 
+ write a usecase steps and technical specification for Operational activities on AWS Test Systems - Enable Debugging on the System using jenkins and 
+ automation tools
+Sure, here's a detailed use case with steps and technical specifications for automating the process of enabling debugging on 
+AWS Test Systems using Jenkins and automation tools:
+
+Use case:
+
+A software development team uses AWS Test Systems to test their applications before deploying them to production. 
+A developer on the team encounters a production issue that requires debugging on one of the AWS Test Systems. 
+The developer triggers a Jenkins job that is configured to enable debugging on the requested AWS Test System. 
+The Jenkins job executes an AWS CLI command to enable debugging on the AWS Test System, and the developer can now start troubleshooting the production issue. 
+Once the issue is resolved, the team can deploy the application to production with confidence, knowing that it has been thoroughly tested and debugged 
+on the AWS Test System.
+
+Steps:
+
+Developer requests Debugging: A developer working on a particular AWS Test System requests debugging to troubleshoot a production issue.
+
+Jenkins Job Trigger: The developer triggers a Jenkins job that is configured to enable debugging on the requested AWS Test System.
+
+Jenkins job runs AWS CLI command: The Jenkins job executes the AWS CLI command to enable debugging on the requested AWS Test System using the instance ID provided by the developer.
+
+AWS Test System is modified: The AWS Test System is modified to enable debugging using the AWS CLI command.
+
+Debugging is Enabled: Debugging is now enabled on the requested AWS Test System, and the developer can start troubleshooting the production issue.
+
+Monitoring: AWS CloudWatch or any other preferred monitoring tool is used to monitor the AWS Test System and ensure that debugging is enabled.
+
+Technical specifications:
+
+Jenkins Job: A Jenkins job is created with appropriate parameters to trigger the AWS CLI command to enable debugging on the requested AWS Test System. The job can be triggered manually or automatically when a certain event occurs.
+
+AWS CLI command: The Jenkins job executes an AWS CLI command to enable debugging on the requested AWS Test System. The command modifies the instance attribute and enables debugging on the system.
+
+Automation tool: An automation tool such as Ansible, Terraform, or AWS CloudFormation can be used to automate the process of enabling debugging on AWS Test Systems. The tool can be integrated with Jenkins to trigger the AWS CLI command when a Jenkins job is executed.
+
+Monitoring tool: AWS CloudWatch or any other preferred monitoring tool can be used to monitor the AWS Test System and ensure that debugging is enabled. The monitoring tool can be configured to send alerts when debugging is disabled or when any other issue occurs on the system.
+
+By automating the process of enabling debugging on AWS Test Systems using Jenkins and automation tools, the software development team can save time and 
+effort and ensure that their applications are thoroughly tested before deployment. The process can be customized and streamlined to suit the team's 
+specific needs and requirements.
+
+#########################################################################################################################################################
+
+
+Sure, here are the steps and technical specifications for automating the process of enabling debugging on AWS Test Systems using Jenkins:
+
+Define the AWS Test Systems: First, define the AWS Test Systems on which the debugging needs to be enabled. This can be done by specifying the relevant instance IDs, tags, or any other unique identifiers.
+
+Install Jenkins: Install Jenkins on a server or a local machine. Follow the installation guide provided by the official Jenkins website.
+
+Install the AWS CLI Plugin: Install the "AWS CLI Plugin" on the Jenkins server. This plugin provides the necessary tools to interact with AWS services.
+
+Configure AWS CLI: Configure AWS CLI with the appropriate IAM role or user credentials that have permissions to access and modify the AWS Test Systems.
+
+Create a Jenkins Job: Create a new Jenkins job by navigating to the Jenkins dashboard and clicking on "New Item." Give the job a name and choose "Freestyle project."
+
+Configure the Jenkins Job: Configure the Jenkins job by specifying the following:
+
+General Settings: Specify the job name, description, and any other general settings that are required.
+Source Code Management: Specify the source code repository URL and any other required credentials or settings.
+Build Triggers: Specify the build trigger settings to schedule the job at regular intervals.
+Build Environment: Configure the build environment by adding the AWS CLI credentials and any other required plugins.
+Build Steps: Add a build step to execute the AWS CLI command to enable debugging on the AWS Test Systems. For example, you can use the following AWS CLI command to enable debugging:
+css
+Copy code
+aws ec2 modify-instance-attribute --instance-id <instance-id> --attribute "userData" --value "#!/bin/bash\necho 'net.ipv4.tcpdump=1' >> /etc/sysctl.conf\nsysctl -p"
+Note: Replace <instance-id> with the actual instance ID of the AWS Test System.
+
+Save and Run the Jenkins Job: Save the Jenkins job and manually run it to test whether it works as expected.
+
+Monitor the Jenkins Job: Monitor the Jenkins job's execution using the Jenkins console output or any other preferred logging tool to ensure that it is running without any errors.
+
+Technical Specification:
+
+AWS CLI Plugin to interact with AWS services.
+AWS CLI credentials to authenticate the AWS CLI commands.
+AWS EC2 ModifyInstanceAttribute API to enable debugging on the AWS Test Systems.
+AWS EC2 Instance ID or any unique identifier to identify the AWS Test Systems on which debugging needs to be enabled.
+Bash script to modify the instance attribute and enable debugging.
+Logging tools such as the Jenkins console output or any other preferred logging tool to monitor the job's execution.
+AWS IAM role or user credentials with the necessary permissions to access and modify the AWS Test Systems.
+AWS CloudWatch or any other preferred monitoring tool to monitor the AWS Test Systems and ensure that debugging is enabled.
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Using Lambda function:
+
+
+write a steps and technical specification in automation way for Operational activities on AWS Test Systems - Enable Debugging on the System
+Sure, here are the steps and technical specifications for automating the process of enabling debugging on AWS Test Systems:
+
+Define the AWS Test Systems: First, define the AWS Test Systems on which the debugging needs to be enabled. This can be done by specifying the relevant instance IDs, tags, or any other unique identifiers.
+
+Configure AWS CLI: Configure AWS CLI with the appropriate IAM role or user credentials that have permissions to access and modify the AWS Test Systems.
+
+Create an AWS Lambda Function: Create an AWS Lambda function using any supported language such as Python, Node.js, or Java. This function will be responsible for enabling debugging on the specified AWS Test Systems.
+
+Write the Lambda Function: Write the Lambda function to enable debugging on the specified AWS Test Systems. This can be done by using the AWS SDKs for the desired programming language. For example, in Python, you can use the boto3 library to interact with AWS services.
+
+Test the Lambda Function Locally: Before deploying the Lambda function to AWS, test it locally to ensure that it works as expected. You can use any preferred testing framework to test the function.
+
+Deploy the Lambda Function: Once the Lambda function has been tested, deploy it to AWS using the AWS CLI or any other supported deployment tool.
+
+Schedule the Lambda Function: Schedule the Lambda function to run at regular intervals to ensure that debugging is enabled on the specified AWS Test Systems at all times. You can use AWS CloudWatch Events to schedule the Lambda function.
+
+Monitor the Lambda Function: Monitor the Lambda function's execution using AWS CloudWatch Logs or any other preferred logging tool to ensure that it is running without any errors.
+
+Technical Specification:
+
+AWS CLI to configure and manage AWS resources.
+AWS Lambda to create and deploy the function.
+AWS SDKs for the desired programming language to interact with AWS services.
+AWS CloudWatch Events to schedule the Lambda function.
+AWS CloudWatch Logs or any other preferred logging tool to monitor the function's execution.
