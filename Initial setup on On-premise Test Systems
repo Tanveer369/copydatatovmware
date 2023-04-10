@@ -1,0 +1,3 @@
+Prepare system-configuration for fresh systems  (non Teamcenter configuration) bashrc pass system aliases hostfile configuration Certificates 
+Required 3rd party software: Java, Python etc.
+Additionally, Store the system configuration in GIT/DB/??
