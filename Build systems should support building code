@@ -169,3 +169,16 @@ Deployment tool: Install and configure Kubernetes to deploy the application to t
 Deployment configuration: Configure the Jenkins pipeline script to deploy changes to production automatically when tests pass and a new version of the application is built successfully.
 Conclusion
 The Active Workspace CICD pipeline is an essential part of the development process for this web application project. With Git for source code management, Jenkins for automation, Maven or Gradle for building, Ansible or Chef for configuration management, and Kubernetes for container orchestration, the team can ensure that code changes are quickly and safely deployed to production. By following the technical specification and configuration outlined in this use case, the team can effectively implement and manage the CICD pipeline for Active Workspace.
+
+
+
+
+
+
+################################################################################################################################################################
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+Java code: SOA clients or RAC plugins
+     Project-specific
+     All Java code
+     Build itself is a part of a bigger/parent pipeline
