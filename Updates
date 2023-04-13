@@ -29,3 +29,20 @@ Jenkins
 Nexus
 Node
 GitHub
+
+
+
+Sure, here are the general steps to manually build source code for a specific branch on an ad-hoc basis:
+
+Clone the repository: Clone the repository using Git or any other version control system you prefer. For example, if you're using Git, you can run the following command in the terminal: git clone <repository URL>.
+
+Switch to the branch: Once you have cloned the repository, switch to the branch you want to build using the git checkout command. For example, if you want to build the develop branch, you can run the following command: git checkout develop.
+
+Install dependencies: Make sure you have all the dependencies and packages required to build the source code. You can typically find this information in the README.md or INSTALL.md file in the repository. Install the dependencies by following the instructions provided.
+
+Build the source code: Depending on the programming language and build system used, there may be different ways to build the source code. Typically, you would run a command such as make, npm run build, or mvn package to build the source code. Again, the exact command will depend on the repository you are working with.
+
+Test the build: Once the build is complete, you can test the build by running any tests provided in the repository. This will ensure that the build is stable and ready to be used.
+
+Deploy the build: If you want to deploy the build, you will need to follow the deployment instructions provided in the repository. This may involve copying files to a specific directory, running scripts, or uploading the build to a remote server.
+
