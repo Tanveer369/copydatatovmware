@@ -1,0 +1,25 @@
+invoke the build compiler npm build
+checkout the repo
+navigate to repo
+invoke the build command npm build command and node for build
+pakage the build artifact
+upload the pakage artifact repo to nexus
+
+prepare update certificate on onpremices
+store in hashicorp vault point no4
+change git to hashicorp vault
+
+istallation comes in technical specification
+
+
+Difference between steps and technical specification
+in steps write manual task
+technical specification write for technical point of prespective
+
+
+we need to talk about enable debugging and enble or disable session for on premises in the next meetigng
+
+remove 8th and 9th point from adhoc task
+invoke th compiler or build program to compile the code
+git checkout 2nd step
+make the neccesorry adptation 
